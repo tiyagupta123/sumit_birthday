@@ -1,0 +1,45 @@
+<!-- ================= surprise.html (SURPRISE PAGE) ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Surprise for You 🎁</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<style>
+body{ margin:0; font-family:Poppins; background:linear-gradient(135deg,#ffdde1,#ee9ca7); overflow:hidden; }
+.center{ min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; }
+.box{ background:white; padding:60px; border-radius:40px; box-shadow:0 30px 60px rgba(0,0,0,.25); animation:pop 1.5s ease; }
+h1{ font-family:Pacifico; color:#ff4d6d; font-size:3rem; }
+p{ font-size:1.2rem; }
+.heart{ position:absolute; animation:float 5s infinite; }
+@keyframes pop{ 0%{transform:scale(0);} 70%{transform:scale(1.1);} 100%{transform:scale(1);} }
+@keyframes float{ 0%{transform:translateY(100vh);opacity:0;} 50%{opacity:1;} 100%{transform:translateY(-10vh);opacity:0;} }
+</style>
+</head>
+<body>
+<audio autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+<div class="center">
+<div class="box">
+<h1>I Love You, Sumit ❤️</h1>
+<p>
+You are my favorite person, my safe place, and my forever.
+Thank you for being you and for loving me the way you do.
+</p>
+<p>Happy Birthday, my love 💕</p>
+</div>
+</div>
+<script>
+for(let i=0;i<25;i++){
+let h=document.createElement('div');
+h.className='heart';
+h.innerHTML='❤️';
+h.style.left=Math.random()*100+'vw';
+h.style.fontSize=(20+Math.random()*30)+'px';
+h.style.animationDuration=(4+Math.random()*4)+'s';
+document.body.appendChild(h);
+}
+</script>
+</body>
+</html>
